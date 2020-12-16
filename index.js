@@ -10,14 +10,14 @@ let pgConnectionConfigs;
 if (process.env.DATABASE_URL) {
   // pg will take in the entire value and use it to connect
   pgConnectionConfigs = {
-    connectionString: process.env.DATABASE,
+    connectionString: process.env.DATABASE_URL,
   };
 } else {
   // this is the same value as before
   pgConnectionConfigs = {
-    user: '<MY_UNIX_USERNAME>',
+    user: 'jeremylim',
     host: 'localhost',
-    database: '<MY_UNIX_USERNAME>',
+    database: 'cats',
     port: 5432,
   };
 }
